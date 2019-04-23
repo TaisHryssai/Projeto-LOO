@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListaController">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button mnemonicParsing="false" onAction="#btCadastroPaciente" prefWidth="100.0" text="Novo" />
+            <Button mnemonicParsing="false" onAction="#btEditarAction" prefWidth="100.0" text="Editar" />
+            <Button mnemonicParsing="false" onAction="#btDeleteAction" prefWidth="100.0" text="Deletar" />
+            <Button mnemonicParsing="false" onAction="#btCancelar" prefWidth="100.0" text="Voltar" />
+            <Button fx:id="close" mnemonicParsing="false" onAction="#fecharTelaAction" prefWidth="100.0" text="Sair" />
+        </items>
+      </ToolBar>
+   </top>
+   <center>
+      <ListView fx:id="lvPacientes" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

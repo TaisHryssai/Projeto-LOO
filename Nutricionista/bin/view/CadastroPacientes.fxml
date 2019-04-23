@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="769.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroController">
+	<bottom>
+		<ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+			<items>
+				<Button fx:id="fecharTela" mnemonicParsing="false" onAction="#fecharTelaAction" prefWidth="100.0" text="Sair" />
+				<Button mnemonicParsing="false" onAction="#btCancelar" prefWidth="100.0" text="Cancelar" />
+				<Button mnemonicParsing="false" onAction="#btCadastroAction" prefWidth="100.0" text="Cadastrar" />
+			</items>
+		</ToolBar>
+	</bottom>
+	<center>
+		<GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+			<columnConstraints>
+				<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="139.0" minWidth="10.0" prefWidth="139.0" />
+				<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="320.0" minWidth="10.0" prefWidth="301.0" />
+				<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="102.0" />
+				<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="261.0" minWidth="10.0" prefWidth="231.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<Label text="NOME COMPLETO" />
+				<Label text="CPF" GridPane.columnIndex="2" />
+				<Label fx:id="lbNascimento" text="NASCIMENTO" GridPane.rowIndex="1" />
+
+				<Label text="ENDEREÇO" GridPane.rowIndex="2" />
+				<Label text="BAIRRO" GridPane.rowIndex="3" />
+				<Label text="N°" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+				<Label text="CIDADE" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+				<Label text="TELEFONE" GridPane.rowIndex="4" />
+				<Label text="CELULAR" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+				<Label text="EMAIL" GridPane.rowIndex="5" />
+				<Label text="MEDIDAS DO PACIÊNTE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font></Label>
+				<Label text="PESO" GridPane.rowIndex="7" />
+				<Label text="ALTURA" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+				<Label text="CINTURA" GridPane.rowIndex="8" />
+				<Label text="BUSTO" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+				<Label text="CÁLCULO IMC" GridPane.rowIndex="10" />
+				<Label text="QUADRIL" GridPane.rowIndex="9" />
+				<TextField fx:id="tfNome" GridPane.columnIndex="1" />
+				<TextField fx:id="tfCPF" onKeyReleased="#ValidaCpf" GridPane.columnIndex="3" />
+				<TextField fx:id="tfEndereco" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+				<TextField fx:id="tfN" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+				<TextField fx:id="tfBairro" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+				<TextField fx:id="tfCidade" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+				<TextField fx:id="tfTelefone" onKeyReleased="#ValidaTelefoneFixo" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+				<TextField fx:id="tfCelular" onKeyReleased="#ValidaCelular" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+				<TextField fx:id="tfEmail" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+				<TextField fx:id="tfPeso" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+				<DatePicker fx:id="datePicker" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="lbIMC" prefHeight="21.0" prefWidth="143.0" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+            <TextField fx:id="tfAltura" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <TextField fx:id="tfCintura" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="tfBusto" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <TextField fx:id="tfQuadril" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <TextField fx:id="tfIMC" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Button fx:id="btIMC" mnemonicParsing="false" onAction="#calculoIMC" prefWidth="100.0" text="IMC" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+			</children>
+		</GridPane>
+	</center>
+   <top>
+      <Label text="CADASTRO DE PACIENTES" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Bell MT" size="32.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>

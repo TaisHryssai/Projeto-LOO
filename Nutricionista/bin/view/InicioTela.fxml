@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="root" stylesheets="@TelaInicio.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InicioController">
+   <top>
+      <GridPane alignment="CENTER" maxHeight="350.0" maxWidth="650.0" prefHeight="333.0" prefWidth="600.0" styleClass="root" stylesheets="@TelaInicio.css" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="187.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="339.0" minWidth="10.0" prefWidth="223.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="190.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="173.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="242.0" minHeight="0.0" prefHeight="207.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#btCadastro" prefHeight="50.0" prefWidth="200.0" text="CADASTRAR" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin></Button>
+            <Button mnemonicParsing="false" onAction="#btLista" prefHeight="50.0" prefWidth="200.0" text="LISTA DE PACIÊNTES" textFill="#171313" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="fechar" mnemonicParsing="false" onAction="#fecharTelaAction" prefHeight="50.0" prefWidth="200.0" text="SAIR" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin></Button>
+            <Label text="BEM VINDO" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial Black" size="28.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </GridPane>
+   </top>
+</BorderPane>
